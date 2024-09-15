@@ -1,0 +1,6 @@
+[
+    { "type": "project", "id": 1, "title": "Payment Service", "bannerImage": "require(../../assets/project/payment_service.svg)", "description": "Description...", "chips": ["Back-End Web Development", "Apache Kafka"], "link": "https://truerev.com/"},
+    { "type": "project", "id": 2, "title": "Large Scale Ecommerce Distributed Backend", "bannerImage": "path_to_image", "description": "Description...", "chips": ["Large Scale Microservices", "CosmosDb"] },
+    { "type": "blog", "id": 1, "title": "All about Large Language Models", "bannerImage": "path_to_image", "description": "Description...", "chips": ["Back-End Web Development", "Apache Kafka"], "redirect": "localhost:3000/sedfe/ewded/dwde" },
+    { "type": "blog", "id": 2, "title": "Neural Networks behind the Chat-Gpt", "bannerImage": "path_to_image", "description": "Description...", "chips": ["Tag C", "Tag D"], "redirect": "localhost:3000/wdhd/wdewd/ewded" }
+]
