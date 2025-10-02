@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ExternalLink, FileText, Users, Calendar } from 'lucide-react'
 
 const Publications = () => {
@@ -64,20 +63,14 @@ const Publications = () => {
   return (
     <section id="publications" className="section-padding bg-white dark:bg-gray-900">
       <div className="container-max">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Publications & Writing
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Research papers, technical articles, and contributions to the AI/ML community
           </p>
-        </motion.div>
+        </div>
 
         {/* Publications */}
         <div className="mb-16">
@@ -87,12 +80,8 @@ const Publications = () => {
           
           <div className="space-y-6">
             {publications.map((pub, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="card p-6"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -145,7 +134,7 @@ const Publications = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -158,13 +147,9 @@ const Publications = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="card p-6 hover:shadow-xl transition-shadow duration-300"
+                className="card p-6"
               >
                 <div className="flex items-center space-x-2 mb-3">
                   <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
@@ -193,7 +178,7 @@ const Publications = () => {
                   <span className="text-sm font-medium">Read Article</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
           
@@ -210,27 +195,6 @@ const Publications = () => {
           </div>
         </div>
 
-        {/* Google Scholar Link */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-12 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg"
-        >
-          <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-            View Complete Publication Record
-          </h4>
-          <a
-            href="https://scholar.google.com/citations?user=POsGTk8AAAAJ&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
-          >
-            <span>Google Scholar Profile</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </motion.div>
       </div>
     </section>
   )
